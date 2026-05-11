@@ -1,354 +1,323 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.1">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4689cc; -webkit-text-stroke: #4689cc}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #c27e65; -webkit-text-stroke: #c27e65}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8cd3fe; -webkit-text-stroke: #8cd3fe}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378}
-    span.s1 {font-kerning: none; background-color: #171818}
-    span.s2 {font-kerning: none; color: #8cd3fe; background-color: #171818; -webkit-text-stroke: 0px #8cd3fe}
-    span.s3 {font-kerning: none; color: #6d6d6d; background-color: #171818; -webkit-text-stroke: 0px #6d6d6d}
-    span.s4 {font-kerning: none; color: #4689cc; background-color: #171818; -webkit-text-stroke: 0px #4689cc}
-    span.s5 {font-kerning: none; color: #cacaca; background-color: #171818; -webkit-text-stroke: 0px #cacaca}
-    span.s6 {font-kerning: none; color: #c27e65; background-color: #171818; -webkit-text-stroke: 0px #c27e65}
-    span.s7 {font-kerning: none}
-    span.s8 {font-kerning: none; color: #d4d4d4; background-color: #171818; -webkit-text-stroke: 0px #d4d4d4}
-    span.s9 {font-kerning: none; color: #71c083; background-color: #171818; -webkit-text-stroke: 0px #71c083}
-    span.s10 {font-kerning: none; color: #a7c598; background-color: #171818; -webkit-text-stroke: 0px #a7c598}
-    span.s11 {font-kerning: none; color: #b76ff7; background-color: #171818; -webkit-text-stroke: 0px #b76ff7}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISU | Professional Adobe Extensions</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Organic palette configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'awo-black': '#1a2221',
+                        'awo-deep': '#384d4d',
+                        'awo-sage': '#878e85',
+                        'awo-mint': '#d1e9db',
+                        'awo-ash': '#cbd0cc',
+                        'awo-offwhite': '#eceae6'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a2221; }
+        ::-webkit-scrollbar-thumb { background: #384d4d; border-radius: 4px; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .glass { background: rgba(56, 77, 77, 0.1); backdrop-filter: blur(10px); }
+        @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .animate-pulse-soft { animation: pulse-soft 2s infinite; }
+
+        /* Estilo para imagens falhas */
+        img { transition: opacity 0.3s ease; }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">html</span><span class="s5"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s1">"en"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"scroll-smooth"</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s5"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">title</span><span class="s3">&gt;</span><span class="s1">VISU | Professional Adobe Extensions</span><span class="s3">&lt;/</span><span class="s4">title</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Load Tailwind CSS --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Load Lucide Icons --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/lucide@latest"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Organic palette configuration --&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>tailwind</span><span class="s8">.</span><span class="s1">config </span><span class="s8">=</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>theme</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>extend</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>colors</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s9">'awo-black'</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#1a2221'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s9">'awo-deep'</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#384d4d'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s9">'awo-sage'</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#878e85'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s9">'awo-mint'</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#d1e9db'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s9">'awo-ash'</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#cbd0cc'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s9">'awo-offwhite'</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#eceae6'</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar</span><span class="s5"> </span><span class="s8">{</span><span class="s5"> </span><span class="s2">width:</span><span class="s5"> </span><span class="s10">8px</span><span class="s8">;</span><span class="s5"> </span><span class="s8">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar-track</span><span class="s5"> </span><span class="s8">{</span><span class="s5"> </span><span class="s2">background:</span><span class="s5"> #1a2221</span><span class="s8">;</span><span class="s5"> </span><span class="s8">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar-thumb</span><span class="s5"> </span><span class="s8">{</span><span class="s5"> </span><span class="s2">background:</span><span class="s5"> #384d4d</span><span class="s8">;</span><span class="s5"> </span><span class="s2">border-radius:</span><span class="s5"> </span><span class="s10">4px</span><span class="s8">;</span><span class="s5"> </span><span class="s8">}</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.no-scrollbar::-webkit-scrollbar</span><span class="s5"> </span><span class="s8">{</span><span class="s5"> </span><span class="s2">display:</span><span class="s5"> </span><span class="s6">none</span><span class="s8">;</span><span class="s5"> </span><span class="s8">}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s4">.no-scrollbar</span><span class="s5"> </span><span class="s8">{</span><span class="s5"> </span><span class="s1">-ms-overflow-style:</span><span class="s5"> </span><span class="s6">none</span><span class="s8">;</span><span class="s5"> </span><span class="s1">scrollbar-width:</span><span class="s5"> </span><span class="s6">none</span><span class="s8">;</span><span class="s5"> </span><span class="s8">}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s4">.glass</span><span class="s5"> </span><span class="s8">{</span><span class="s5"> </span><span class="s1">background:</span><span class="s5"> </span><span class="s6">rgba(</span><span class="s10">56</span><span class="s8">,</span><span class="s5"> </span><span class="s10">77</span><span class="s8">,</span><span class="s5"> </span><span class="s10">77</span><span class="s8">,</span><span class="s5"> </span><span class="s10">0.1</span><span class="s6">)</span><span class="s8">;</span><span class="s5"> </span><span class="s1">backdrop-filter:</span><span class="s5"> </span><span class="s6">blur(</span><span class="s10">10px</span><span class="s6">)</span><span class="s8">;</span><span class="s5"> </span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">@keyframes</span><span class="s1"> </span><span class="s6">pulse-soft</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s10">0%</span><span class="s8">,</span><span class="s1"> </span><span class="s10">100%</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">opacity:</span><span class="s1"> </span><span class="s10">1</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span><span class="s1"> </span><span class="s10">50%</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">opacity:</span><span class="s1"> </span><span class="s10">0.5</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span><span class="s1"> </span><span class="s8">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.animate-pulse-soft</span><span class="s5"> </span><span class="s8">{</span><span class="s5"> </span><span class="s2">animation:</span><span class="s5"> </span><span class="s6">pulse-soft</span><span class="s5"> </span><span class="s10">2s</span><span class="s5"> </span><span class="s6">infinite</span><span class="s8">;</span><span class="s5"> </span><span class="s8">}</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">/* Estilo para imagens falhas */</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">img</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">transition:</span><span class="s1"> </span><span class="s6">opacity</span><span class="s1"> </span><span class="s10">0.3s</span><span class="s1"> </span><span class="s6">ease</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">body</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-awo-black text-awo-offwhite font-sans selection:bg-awo-mint selection:text-awo-black overflow-x-hidden uppercase tracking-widest text-[10px] font-bold"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- WhatsApp Floating Button --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://wa.me/message/4WTESZSDVZDMB1"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fixed bottom-[30px] right-[30px] z-[100] bg-awo-mint text-awo-black p-4 rounded-full shadow-2xl flex items-center justify-center border border-white/20 transition-transform hover:scale-110"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"message-circle"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Navigation --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">nav</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fixed w-full z-50 bg-awo-black/90 backdrop-blur-md border-b border-white/5"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center justify-between h-20"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex-shrink-0 cursor-pointer"</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"window.scrollTo({top: 0, behavior: 'smooth'})"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-black tracking-tighter flex items-center gap-1 uppercase"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>VISU</span><span class="s3">&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-awo-mint lowercase"</span><span class="s3">&gt;</span><span class="s1">.tools</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"hidden md:block"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"ml-10 flex items-baseline space-x-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"document.getElementById('products').scrollIntoView({behavior: 'smooth'})"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-awo-mint transition-colors px-3 py-2 text-[10px]"</span><span class="s3">&gt;</span><span class="s5">Products</span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"document.getElementById('testimonials').scrollIntoView({behavior: 'smooth'})"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-awo-mint transition-colors px-3 py-2 text-[10px]"</span><span class="s3">&gt;</span><span class="s5">Reviews</span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://wa.me/message/4WTESZSDVZDMB1"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-awo-mint text-awo-black px-6 py-2 rounded-full transition-all flex items-center gap-2"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s6">"phone"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"w-3 h-3"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s1"> WhatsApp</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"md:hidden text-awo-ash"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s1"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s6">"toggleMenu()"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"p-2"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s6">"menu"</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s6">"menu-icon"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Mobile Menu Placeholder --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"mobile-menu"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden md:hidden bg-awo-black border-b border-white/5 p-4 flex flex-col gap-4 items-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"scrollToSection('products')"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-awo-mint"</span><span class="s3">&gt;</span><span class="s5">Products</span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"scrollToSection('testimonials')"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-awo-mint"</span><span class="s3">&gt;</span><span class="s5">Reviews</span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://wa.me/message/4WTESZSDVZDMB1"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-awo-mint"</span><span class="s3">&gt;</span><span class="s5">WhatsApp Support</span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">nav</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Hero --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"hero"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"relative pt-40 pb-20 lg:pt-56 lg:pb-32 overflow-hidden text-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-awo-mint/5 blur-[150px] rounded-full pointer-events-none"</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">h1</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none uppercase"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>High Performance </span><span class="s3">&lt;</span><span class="s4">br</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"hidden md:block"</span><span class="s1"> </span><span class="s3">/&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-transparent bg-clip-text bg-gradient-to-r from-awo-mint to-awo-sage"</span><span class="s3">&gt;</span><span class="s5">Workflow.</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">h1</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-4 max-w-2xl mx-auto text-xl text-awo-ash mb-12 font-light italic leading-relaxed lowercase"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>Native solutions for Adobe Premiere Pro. </span><span class="s3">&lt;</span><span class="s4">br</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"hidden md:block"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>Robust tools with direct support from the creator.</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row justify-center gap-6"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">button</span><span class="s5"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"document.getElementById('products').scrollIntoView({behavior: 'smooth'})"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-awo-offwhite text-awo-black px-10 py-4 rounded-xl hover:bg-white transition-all shadow-lg text-[10px] tracking-[0.2em]"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>Browse Extensions</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">button</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://wa.me/message/4WTESZSDVZDMB1"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"border border-white/10 text-white px-10 py-4 rounded-xl font-bold hover:bg-awo-deep transition-all flex items-center justify-center gap-2 text-[10px] tracking-[0.2em]"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s6">"message-square"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"w-4 h-4"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s1"> Get Support</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- DETAILED PRODUCTS SECTION --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"products"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-24 border-t border-white/5"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-48"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- MAIN PRODUCT: SFX STUDIO --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 lg:grid-cols-12 gap-16 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-5 space-y-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-16 h-16 bg-blue-600/20 text-blue-400 rounded-2xl flex items-center justify-center shadow-lg mb-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s6">"mic-2"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"w-8 h-8"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs font-black tracking-[0.3em] text-awo-mint uppercase mb-2"</span><span class="s3">&gt;</span><span class="s5">CEP Panel v1.2.0</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-5xl font-black uppercase tracking-tighter text-white"</span><span class="s3">&gt;</span><span class="s5">SFX Studio</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-awo-ash text-lg leading-relaxed font-light lowercase"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>The definitive Sound Design engine for Premiere Pro. Search 500k+ sounds from Freesound.org or generate custom AI audio without leaving your timeline.</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">ul</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-4 text-[10px] font-bold text-awo-sage"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-3"</span><span class="s3">&gt;&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"check-circle-2"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4 text-awo-mint"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s5"> Direct Import to Timeline</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-3"</span><span class="s3">&gt;&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"check-circle-2"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4 text-awo-mint"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s5"> AI Generation via ElevenLabs</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">li</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-3"</span><span class="s3">&gt;&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"check-circle-2"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4 text-awo-mint"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s5"> Metadata &amp; Search Integration</span><span class="s3">&lt;/</span><span class="s4">li</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">ul</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row gap-4 pt-6"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://aescripts.com"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex-1 bg-awo-mint text-awo-black px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white text-center transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>Buy on aescripts</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://wa.me/message/4WTESZSDVZDMB1"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex-1 border border-white/10 text-awo-ash px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white/5 text-center transition-all flex items-center justify-center gap-2"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>WhatsApp Support</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-7 space-y-6"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- Video Embed with more robust settings --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-black rounded-3xl border border-white/10 overflow-hidden shadow-2xl relative group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">iframe</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://www.youtube-nocookie.com/embed/3gEouieR9ug?rel=0&amp;modestbranding=1"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s2">class</span><span class="s3">=</span><span class="s6">"w-full h-full object-cover"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s2">frameBorder</span><span class="s3">=</span><span class="s6">"0"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s2">allow</span><span class="s3">=</span><span class="s1">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s2">allowFullScreen</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">iframe</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- Screenshots Gallery with Error Handlers --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-2 md:grid-cols-3 gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s1"> </span><span class="s2">src</span><span class="s3">=</span><span class="s6">"01-search-interface.jpg"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">onerror</span><span class="s3">=</span><span class="s1">"this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Search+Interface'"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full object-cover opacity-60 hover:opacity-100 transition-all"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                 </span></span><span class="s2">alt</span><span class="s3">=</span><span class="s6">"Search Interface"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s1"> </span><span class="s2">src</span><span class="s3">=</span><span class="s6">"02-ai-generation-setup.jpg"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">onerror</span><span class="s3">=</span><span class="s1">"this.src='https://placehold.co/400x400/1a2221/d1e9db?text=AI+Setup'"</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full object-cover opacity-60 hover:opacity-100 transition-all"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                 </span></span><span class="s2">alt</span><span class="s3">=</span><span class="s6">"AI Generation"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s1"> </span><span class="s2">src</span><span class="s3">=</span><span class="s6">"03-generated-sounds-list.png"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">onerror</span><span class="s3">=</span><span class="s1">"this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Sounds+List'"</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full object-cover opacity-60 hover:opacity-100 transition-all"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                 </span></span><span class="s2">alt</span><span class="s3">=</span><span class="s6">"Sounds List"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"04-generated-sounds-list-I.A.png"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">onerror</span><span class="s3">=</span><span class="s1">"this.src='https://placehold.co/400x400/1a2221/d1e9db?text=AI+Sounds'"</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full object-cover opacity-60 hover:opacity-100 transition-all"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                 </span></span><span class="s2">alt</span><span class="s3">=</span><span class="s6">"AI Sound List"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s1"> </span><span class="s2">src</span><span class="s3">=</span><span class="s6">"05-settings-panel.png"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">onerror</span><span class="s3">=</span><span class="s1">"this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Settings'"</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full object-cover opacity-60 hover:opacity-100 transition-all"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                 </span></span><span class="s2">alt</span><span class="s3">=</span><span class="s6">"Settings Panel"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s1"> </span><span class="s2">src</span><span class="s3">=</span><span class="s6">"06-timeline-integration.jpg"</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">onerror</span><span class="s3">=</span><span class="s1">"this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Timeline'"</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                                 </span></span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full object-cover opacity-60 hover:opacity-100 transition-all"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                 </span></span><span class="s2">alt</span><span class="s3">=</span><span class="s6">"Timeline Integration"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- NEXT RELEASE: TIMELINE ORGANIZER --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 lg:grid-cols-12 gap-16 items-center py-20 border-t border-white/5 opacity-80"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-6 space-y-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 bg-awo-mint/10 text-awo-mint rounded-xl flex items-center justify-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"clock"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6 animate-pulse text-awo-mint"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs font-bold text-awo-mint bg-awo-mint/5 px-4 py-1 rounded-full border border-awo-mint/20 animate-pulse"</span><span class="s3">&gt;</span><span class="s5">COMING SOON</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-5xl font-black uppercase tracking-tighter text-white"</span><span class="s3">&gt;</span><span class="s5">Timeline Organizer</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-awo-ash text-lg leading-relaxed font-light lowercase"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>The next generation of project management. Automatically organize 100+ tracks, categorize audio types, and prepare your project for professional mixing with a single click.</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"pt-4"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://wa.me/message/4WTESZSDVZDMB1"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"inline-flex items-center gap-3 border border-awo-mint/30 text-awo-mint px-8 py-4 rounded-xl font-black uppercase tracking-widest text-[10px] hover:bg-awo-mint hover:text-awo-black transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>Notify Me via WhatsApp</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"lg:col-span-6"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"aspect-video bg-awo-deep/10 border border-white/5 rounded-3xl flex flex-col items-center justify-center text-center p-12 glass"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"lock"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 text-awo-mint/20 mb-6"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h4</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-black text-white/40 mb-2 uppercase"</span><span class="s3">&gt;</span><span class="s5">Media under development</span><span class="s3">&lt;/</span><span class="s4">h4</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-awo-ash/40 text-xs lowercase italic"</span><span class="s3">&gt;</span><span class="s1">Internal builds only. Join our waitlist for beta access.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- REVIEWS --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"testimonials"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-32 bg-awo-deep/10 border-y border-white/5"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mb-24"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm font-bold tracking-[0.4em] text-awo-mint uppercase mb-4"</span><span class="s3">&gt;</span><span class="s5">Social Proof</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-5xl font-black uppercase tracking-tighter text-white"</span><span class="s3">&gt;</span><span class="s5">What Editors say</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-3 gap-12 text-left lowercase font-light"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"quote"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-awo-ash italic leading-relaxed mb-10 text-lg"</span><span class="s3">&gt;</span><span class="s1">"SFX Studio saves me hours of browsing and downloading. It's the tool I wish I had for the last 10 years."</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://i.pravatar.cc/150?u=a"</span><span class="s5"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"User"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">h5</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold uppercase text-[10px] tracking-widest"</span><span class="s3">&gt;</span><span class="s5">Fabio Macedo</span><span class="s3">&lt;/</span><span class="s4">h5</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-awo-mint font-bold uppercase tracking-widest text-[8px]"</span><span class="s3">&gt;</span><span class="s5">Sr. Motion Designer</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"quote"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-awo-ash italic leading-relaxed mb-10 text-lg"</span><span class="s3">&gt;</span><span class="s1">"Professional timeline prep has never been this easy. Organizer is a game changer for corporate workflows."</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://i.pravatar.cc/150?u=b"</span><span class="s5"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"User"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">h5</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold uppercase text-[10px] tracking-widest"</span><span class="s3">&gt;</span><span class="s5">Mariana Leite</span><span class="s3">&lt;/</span><span class="s4">h5</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-awo-mint font-bold uppercase tracking-widest text-[8px]"</span><span class="s3">&gt;</span><span class="s5">Video Editor</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s5"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s1">"quote"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-awo-ash italic leading-relaxed mb-10 text-lg"</span><span class="s3">&gt;</span><span class="s1">"The support is incredible and the tools are rock solid. Highly recommended for anyone needing speed."</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">img</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://i.pravatar.cc/150?u=c"</span><span class="s5"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"User"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">h5</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold uppercase text-[10px] tracking-widest"</span><span class="s3">&gt;</span><span class="s5">Luan Almeida</span><span class="s3">&lt;/</span><span class="s4">h5</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-awo-mint font-bold uppercase tracking-widest text-[8px]"</span><span class="s3">&gt;</span><span class="s5">Freelance Editor</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p6"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Footer --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">footer</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"contact"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-32 border-t border-white/5 bg-awo-black text-center relative overflow-hidden"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-5xl font-black mb-8 uppercase tracking-tighter"</span><span class="s3">&gt;</span><span class="s5">Need custom workflow help?</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-awo-ash mb-16 italic text-lg font-light lowercase"</span><span class="s3">&gt;</span><span class="s1">We're here to optimize your Adobe ecosystem.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row justify-center gap-8 mb-20 uppercase font-black tracking-widest text-[10px]"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://wa.me/message/4WTESZSDVZDMB1"</span><span class="s5"> </span><span class="s2">target</span><span class="s3">=</span><span class="s1">"_blank"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-awo-mint text-awo-black px-12 py-6 rounded-2xl hover:scale-105 transition-all flex items-center justify-center gap-3"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s6">"message-circle"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"w-5 h-5"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s1"> WhatsApp Direct</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">a</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"mailto:antunes.daniell@gmail.com"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"border border-white/10 text-awo-ash px-12 py-6 rounded-2xl hover:bg-white/5 transition-all flex items-center justify-center gap-3"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">i</span><span class="s1"> </span><span class="s2">data-lucide</span><span class="s3">=</span><span class="s6">"mail"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"w-8 h-8"</span><span class="s3">&gt;&lt;/</span><span class="s4">i</span><span class="s3">&gt;</span><span class="s1"> Email Support</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"pt-12 border-t border-white/5 text-awo-sage text-[10px] font-mono tracking-[0.4em] uppercase font-bold"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&amp;copy; 2026 VISU.tools — High Performance Software for Creatives.</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">footer</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>lucide</span><span class="s8">.</span><span class="s1">createIcons</span><span class="s8">();</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">function</span><span class="s1"> toggleMenu</span><span class="s8">()</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> menu </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">getElementById</span><span class="s8">(</span><span class="s9">'mobile-menu'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">menu</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>menu</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">toggle</span><span class="s8">(</span><span class="s9">'hidden'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p5"><span class="s7"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">function</span><span class="s1"> scrollToSection</span><span class="s8">(</span><span class="s1">id</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> element </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">getElementById</span><span class="s8">(</span><span class="s1">id</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">element</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>element</span><span class="s8">.</span><span class="s1">scrollIntoView</span><span class="s8">({</span><span class="s1"> behavior</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'smooth'</span><span class="s1"> </span><span class="s8">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> menu </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">getElementById</span><span class="s8">(</span><span class="s9">'mobile-menu'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">menu</span><span class="s8">)</span><span class="s1"> menu</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">add</span><span class="s8">(</span><span class="s9">'hidden'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+<body class="bg-awo-black text-awo-offwhite font-sans selection:bg-awo-mint selection:text-awo-black overflow-x-hidden uppercase tracking-widest text-[10px] font-bold">
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="fixed bottom-[30px] right-[30px] z-[100] bg-awo-mint text-awo-black p-4 rounded-full shadow-2xl flex items-center justify-center border border-white/20 transition-transform hover:scale-110">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-awo-black/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <span class="text-3xl font-black tracking-tighter flex items-center gap-1 uppercase">
+                        VISU<span class="text-awo-mint lowercase">.tools</span>
+                    </span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="hover:text-awo-mint transition-colors px-3 py-2 text-[10px]">Products</button>
+                        <button onclick="document.getElementById('testimonials').scrollIntoView({behavior: 'smooth'})" class="hover:text-awo-mint transition-colors px-3 py-2 text-[10px]">Reviews</button>
+                        <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="bg-awo-mint text-awo-black px-6 py-2 rounded-full transition-all flex items-center gap-2">
+                            <i data-lucide="phone" class="w-3 h-3"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:hidden text-awo-ash">
+                    <button onclick="toggleMenu()" class="p-2">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Placeholder -->
+        <div id="mobile-menu" class="hidden md:hidden bg-awo-black border-b border-white/5 p-4 flex flex-col gap-4 items-center">
+            <button onclick="scrollToSection('products')" class="hover:text-awo-mint">Products</button>
+            <button onclick="scrollToSection('testimonials')" class="hover:text-awo-mint">Reviews</button>
+            <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="text-awo-mint">WhatsApp Support</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="relative pt-40 pb-20 lg:pt-56 lg:pb-32 overflow-hidden text-center">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-awo-mint/5 blur-[150px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none uppercase">
+                High Performance <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-awo-mint to-awo-sage">Workflow.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-awo-ash mb-12 font-light italic leading-relaxed lowercase">
+                Native solutions for Adobe Premiere Pro. <br class="hidden md:block">
+                Robust tools with direct support from the creator.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="bg-awo-offwhite text-awo-black px-10 py-4 rounded-xl hover:bg-white transition-all shadow-lg text-[10px] tracking-[0.2em]">
+                    Browse Extensions
+                </button>
+                <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="border border-white/10 text-white px-10 py-4 rounded-xl font-bold hover:bg-awo-deep transition-all flex items-center justify-center gap-2 text-[10px] tracking-[0.2em]">
+                    <i data-lucide="message-square" class="w-4 h-4"></i> Get Support
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED PRODUCTS SECTION -->
+    <section id="products" class="py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-48">
+            
+            <!-- MAIN PRODUCT: SFX STUDIO -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="w-16 h-16 bg-blue-600/20 text-blue-400 rounded-2xl flex items-center justify-center shadow-lg mb-6">
+                            <i data-lucide="mic-2" class="w-8 h-8"></i>
+                        </div>
+                        <h2 class="text-xs font-black tracking-[0.3em] text-awo-mint uppercase mb-2">CEP Panel v1.2.0</h2>
+                        <h3 class="text-5xl font-black uppercase tracking-tighter text-white">SFX Studio</h3>
+                    </div>
+                    <p class="text-awo-ash text-lg leading-relaxed font-light lowercase">
+                        The definitive Sound Design engine for Premiere Pro. Search 500k+ sounds from Freesound.org or generate custom AI audio without leaving your timeline.
+                    </p>
+                    <ul class="space-y-4 text-[10px] font-bold text-awo-sage">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Direct Import to Timeline</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> AI Generation via ElevenLabs</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Metadata & Search Integration</li>
+                    </ul>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                        <a href="https://aescripts.com" target="_blank" class="flex-1 bg-awo-mint text-awo-black px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white text-center transition-all">
+                            Buy on aescripts
+                        </a>
+                        <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="flex-1 border border-white/10 text-awo-ash px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white/5 text-center transition-all flex items-center justify-center gap-2">
+                            WhatsApp Support
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Video Embed with more robust settings -->
+                    <div class="aspect-video bg-black rounded-3xl border border-white/10 overflow-hidden shadow-2xl relative group">
+                        <iframe 
+                            src="https://www.youtube-nocookie.com/embed/3gEouieR9ug?rel=0&modestbranding=1" 
+                            class="w-full h-full object-cover" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+                    
+                    <!-- Screenshots Gallery with Error Handlers -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
+                            <img src="01-search-interface.jpg" 
+                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Search+Interface'" 
+                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
+                                 alt="Search Interface">
+                        </div>
+                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
+                            <img src="02-ai-generation-setup.jpg" 
+                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=AI+Setup'"
+                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
+                                 alt="AI Generation">
+                        </div>
+                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
+                            <img src="03-generated-sounds-list.png" 
+                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Sounds+List'"
+                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
+                                 alt="Sounds List">
+                        </div>
+                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
+                            <img src="04-generated-sounds-list-I.A.png" 
+                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=AI+Sounds'"
+                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
+                                 alt="AI Sound List">
+                        </div>
+                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
+                            <img src="05-settings-panel.png" 
+                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Settings'"
+                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
+                                 alt="Settings Panel">
+                        </div>
+                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
+                            <img src="06-timeline-integration.jpg" 
+                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Timeline'"
+                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
+                                 alt="Timeline Integration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEXT RELEASE: TIMELINE ORGANIZER -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center py-20 border-t border-white/5 opacity-80">
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-awo-mint/10 text-awo-mint rounded-xl flex items-center justify-center">
+                            <i data-lucide="clock" class="w-6 h-6 animate-pulse text-awo-mint"></i>
+                        </div>
+                        <span class="text-xs font-bold text-awo-mint bg-awo-mint/5 px-4 py-1 rounded-full border border-awo-mint/20 animate-pulse">COMING SOON</span>
+                    </div>
+                    <h3 class="text-5xl font-black uppercase tracking-tighter text-white">Timeline Organizer</h3>
+                    <p class="text-awo-ash text-lg leading-relaxed font-light lowercase">
+                        The next generation of project management. Automatically organize 100+ tracks, categorize audio types, and prepare your project for professional mixing with a single click.
+                    </p>
+                    <div class="pt-4">
+                        <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="inline-flex items-center gap-3 border border-awo-mint/30 text-awo-mint px-8 py-4 rounded-xl font-black uppercase tracking-widest text-[10px] hover:bg-awo-mint hover:text-awo-black transition-all">
+                            Notify Me via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="aspect-video bg-awo-deep/10 border border-white/5 rounded-3xl flex flex-col items-center justify-center text-center p-12 glass">
+                        <i data-lucide="lock" class="w-12 h-12 text-awo-mint/20 mb-6"></i>
+                        <h4 class="text-xl font-black text-white/40 mb-2 uppercase">Media under development</h4>
+                        <p class="text-awo-ash/40 text-xs lowercase italic">Internal builds only. Join our waitlist for beta access.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="testimonials" class="py-32 bg-awo-deep/10 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-24">
+                <h2 class="text-sm font-bold tracking-[0.4em] text-awo-mint uppercase mb-4">Social Proof</h2>
+                <h3 class="text-5xl font-black uppercase tracking-tighter text-white">What Editors say</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left lowercase font-light">
+                <div class="bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all">
+                    <i data-lucide="quote" class="absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"></i>
+                    <p class="text-awo-ash italic leading-relaxed mb-10 text-lg">"SFX Studio saves me hours of browsing and downloading. It's the tool I wish I had for the last 10 years."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale">
+                            <img src="https://i.pravatar.cc/150?u=a" alt="User">
+                        </div>
+                        <div>
+                            <h5 class="font-bold uppercase text-[10px] tracking-widest">Fabio Macedo</h5>
+                            <p class="text-awo-mint font-bold uppercase tracking-widest text-[8px]">Sr. Motion Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all">
+                    <i data-lucide="quote" class="absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"></i>
+                    <p class="text-awo-ash italic leading-relaxed mb-10 text-lg">"Professional timeline prep has never been this easy. Organizer is a game changer for corporate workflows."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale">
+                            <img src="https://i.pravatar.cc/150?u=b" alt="User">
+                        </div>
+                        <div>
+                            <h5 class="font-bold uppercase text-[10px] tracking-widest">Mariana Leite</h5>
+                            <p class="text-awo-mint font-bold uppercase tracking-widest text-[8px]">Video Editor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all">
+                    <i data-lucide="quote" class="absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"></i>
+                    <p class="text-awo-ash italic leading-relaxed mb-10 text-lg">"The support is incredible and the tools are rock solid. Highly recommended for anyone needing speed."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale">
+                            <img src="https://i.pravatar.cc/150?u=c" alt="User">
+                        </div>
+                        <div>
+                            <h5 class="font-bold uppercase text-[10px] tracking-widest">Luan Almeida</h5>
+                            <p class="text-awo-mint font-bold uppercase tracking-widest text-[8px]">Freelance Editor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-32 border-t border-white/5 bg-awo-black text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-5xl font-black mb-8 uppercase tracking-tighter">Need custom workflow help?</h2>
+            <p class="text-awo-ash mb-16 italic text-lg font-light lowercase">We're here to optimize your Adobe ecosystem.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-8 mb-20 uppercase font-black tracking-widest text-[10px]">
+                <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="bg-awo-mint text-awo-black px-12 py-6 rounded-2xl hover:scale-105 transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp Direct
+                </a>
+                <a href="mailto:antunes.daniell@gmail.com" class="border border-white/10 text-awo-ash px-12 py-6 rounded-2xl hover:bg-white/5 transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="mail" class="w-8 h-8"></i> Email Support
+                </a>
+            </div>
+
+            <div class="pt-12 border-t border-white/5 text-awo-sage text-[10px] font-mono tracking-[0.4em] uppercase font-bold">
+                &copy; 2026 VISU.tools — High Performance Software for Creatives.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                const menu = document.getElementById('mobile-menu');
+                if (menu) menu.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
