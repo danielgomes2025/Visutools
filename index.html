@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VISU | Professional Adobe Extensions</title>
+    <title>SFX Studio | Native Adobe Premiere Pro Extension</title>
     
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +11,6 @@
     <!-- Load Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Organic palette configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -33,246 +32,84 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #1a2221; }
         ::-webkit-scrollbar-thumb { background: #384d4d; border-radius: 4px; }
-
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
         .glass { background: rgba(56, 77, 77, 0.1); backdrop-filter: blur(10px); }
-        @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        .animate-pulse-soft { animation: pulse-soft 2s infinite; }
-
-        /* Estilo para imagens falhas */
-        img { transition: opacity 0.3s ease; }
     </style>
 </head>
 <body class="bg-awo-black text-awo-offwhite font-sans selection:bg-awo-mint selection:text-awo-black overflow-x-hidden uppercase tracking-widest text-[10px] font-bold">
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="fixed bottom-[30px] right-[30px] z-[100] bg-awo-mint text-awo-black p-4 rounded-full shadow-2xl flex items-center justify-center border border-white/20 transition-transform hover:scale-110">
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
-    </a>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-awo-black/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="flex-shrink-0 cursor-pointer">
                     <span class="text-3xl font-black tracking-tighter flex items-center gap-1 uppercase">
                         VISU<span class="text-awo-mint lowercase">.tools</span>
                     </span>
                 </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="hover:text-awo-mint transition-colors px-3 py-2 text-[10px]">Products</button>
-                        <button onclick="document.getElementById('testimonials').scrollIntoView({behavior: 'smooth'})" class="hover:text-awo-mint transition-colors px-3 py-2 text-[10px]">Reviews</button>
-                        <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="bg-awo-mint text-awo-black px-6 py-2 rounded-full transition-all flex items-center gap-2">
-                            <i data-lucide="phone" class="w-3 h-3"></i> WhatsApp
-                        </a>
-                    </div>
-                </div>
-
-                <div class="md:hidden text-awo-ash">
-                    <button onclick="toggleMenu()" class="p-2">
-                        <i data-lucide="menu" id="menu-icon"></i>
-                    </button>
-                </div>
             </div>
-        </div>
-        <!-- Mobile Menu Placeholder -->
-        <div id="mobile-menu" class="hidden md:hidden bg-awo-black border-b border-white/5 p-4 flex flex-col gap-4 items-center">
-            <button onclick="scrollToSection('products')" class="hover:text-awo-mint">Products</button>
-            <button onclick="scrollToSection('testimonials')" class="hover:text-awo-mint">Reviews</button>
-            <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="text-awo-mint">WhatsApp Support</a>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section: Focused on Conversion -->
     <section id="hero" class="relative pt-40 pb-20 lg:pt-56 lg:pb-32 overflow-hidden text-center">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-awo-mint/5 blur-[150px] rounded-full pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none uppercase">
-                High Performance <br class="hidden md:block" />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-awo-mint to-awo-sage">Workflow.</span>
+                SFX Studio <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-awo-mint to-awo-sage">for Premiere Pro.</span>
             </h1>
             <p class="mt-4 max-w-2xl mx-auto text-xl text-awo-ash mb-12 font-light italic leading-relaxed lowercase">
-                Native solutions for Adobe Premiere Pro. <br class="hidden md:block">
-                Robust tools with direct support from the creator.
+                The definitive Sound Design engine. Search 500k+ sounds or generate AI audio directly in your timeline.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="bg-awo-offwhite text-awo-black px-10 py-4 rounded-xl hover:bg-white transition-all shadow-lg text-[10px] tracking-[0.2em]">
-                    Browse Extensions
-                </button>
-                <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="border border-white/10 text-white px-10 py-4 rounded-xl font-bold hover:bg-awo-deep transition-all flex items-center justify-center gap-2 text-[10px] tracking-[0.2em]">
-                    <i data-lucide="message-square" class="w-4 h-4"></i> Get Support
+            <div class="flex justify-center">
+                <a href="https://aescripts.com/sfx-studio/" target="_blank" class="bg-awo-mint text-awo-black px-12 py-6 rounded-2xl hover:bg-white transition-all shadow-[0_0_50px_-12px_rgba(209,233,219,0.3)] text-[12px] font-black uppercase tracking-[0.3em]">
+                    Get SFX Studio on Aescripts
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- DETAILED PRODUCTS SECTION -->
-    <section id="products" class="py-24 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-48">
+    <!-- Product Features -->
+    <section id="features" class="py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <div class="lg:col-span-5 space-y-8">
+                <h2 class="text-xs font-black tracking-[0.3em] text-awo-mint uppercase mb-2">High Performance Workflow</h2>
+                <h3 class="text-5xl font-black uppercase tracking-tighter text-white">Sound Design redefined.</h3>
+                <p class="text-awo-ash text-lg leading-relaxed font-light lowercase">
+                    Stop wasting time browsing folders. SFX Studio puts the world's largest sound libraries at your fingertips without leaving Premiere Pro.
+                </p>
+                <ul class="space-y-4 text-[10px] font-bold text-awo-sage">
+                    <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Direct Import to Timeline</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> ElevenLabs AI Generation</li>
+                    <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Metadata & Search Integration</li>
+                </ul>
+            </div>
             
-            <!-- MAIN PRODUCT: SFX STUDIO -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                <div class="lg:col-span-5 space-y-8">
-                    <div>
-                        <div class="w-16 h-16 bg-blue-600/20 text-blue-400 rounded-2xl flex items-center justify-center shadow-lg mb-6">
-                            <i data-lucide="mic-2" class="w-8 h-8"></i>
-                        </div>
-                        <h2 class="text-xs font-black tracking-[0.3em] text-awo-mint uppercase mb-2">CEP Panel v1.2.0</h2>
-                        <h3 class="text-5xl font-black uppercase tracking-tighter text-white">SFX Studio</h3>
-                    </div>
-                    <p class="text-awo-ash text-lg leading-relaxed font-light lowercase">
-                        The definitive Sound Design engine for Premiere Pro. Search 500k+ sounds from Freesound.org or generate custom AI audio without leaving your timeline.
-                    </p>
-                    <ul class="space-y-4 text-[10px] font-bold text-awo-sage">
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Direct Import to Timeline</li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> AI Generation via ElevenLabs</li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Metadata & Search Integration</li>
-                    </ul>
-                    <div class="flex flex-col sm:flex-row gap-4 pt-6">
-                        <a href="https://aescripts.com" target="_blank" class="flex-1 bg-awo-mint text-awo-black px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white text-center transition-all">
-                            Buy on aescripts
-                        </a>
-                        <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="flex-1 border border-white/10 text-awo-ash px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white/5 text-center transition-all flex items-center justify-center gap-2">
-                            WhatsApp Support
-                        </a>
-                    </div>
+            <div class="lg:col-span-7 space-y-6">
+                <!-- Video Embed -->
+                <div class="aspect-video bg-black rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+                    <iframe 
+                        src="https://www.youtube.com/embed/z-I4H5B1PsE" 
+                        class="w-full h-full object-cover" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen>
+                    </iframe>
                 </div>
                 
-                <div class="lg:col-span-7 space-y-6">
-                    <!-- Video Embed with more robust settings -->
-                    <div class="aspect-video bg-black rounded-3xl border border-white/10 overflow-hidden shadow-2xl relative group">
-                        <iframe 
-                            src="https://www.youtube.com/embed/_qzZA-GR8ik" 
-                            class="w-full h-full object-cover" 
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowFullScreen>
-                        </iframe>
+                <!-- Screenshots Gallery -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden">
+                        <img src="04-generated-sounds-list-I.A_2.png" onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=SFX'" class="w-full h-full object-cover opacity-60">
                     </div>
-                    
-                    <!-- Screenshots Gallery with Error Handlers -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
-                            <img src="01-search-interface.jpg" 
-                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Search+Interface'" 
-                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
-                                 alt="Search Interface">
-                        </div>
-                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
-                            <img src="02-ai-generation-setup.jpg" 
-                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=AI+Setup'"
-                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
-                                 alt="AI Generation">
-                        </div>
-                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
-                            <img src="03-generated-sounds-list.png" 
-                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Sounds+List'"
-                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
-                                 alt="Sounds List">
-                        </div>
-                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
-                            <img src="04-generated-sounds-list-I.A.png" 
-                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=AI+Sounds'"
-                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
-                                 alt="AI Sound List">
-                        </div>
-                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
-                            <img src="05-settings-panel.png" 
-                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Settings'"
-                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
-                                 alt="Settings Panel">
-                        </div>
-                        <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group">
-                            <img src="06-timeline-integration.jpg" 
-                                 onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Timeline'"
-                                 class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all" 
-                                 alt="Timeline Integration">
-                        </div>
+                    <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden">
+                        <img src="05-settings-panel - cópia_2.png" onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Settings'" class="w-full h-full object-cover opacity-60">
                     </div>
-                </div>
-            </div>
-
-            <!-- NEXT RELEASE: TIMELINE ORGANIZER -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center py-20 border-t border-white/5 opacity-80">
-                <div class="lg:col-span-6 space-y-8">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-awo-mint/10 text-awo-mint rounded-xl flex items-center justify-center">
-                            <i data-lucide="clock" class="w-6 h-6 animate-pulse text-awo-mint"></i>
-                        </div>
-                        <span class="text-xs font-bold text-awo-mint bg-awo-mint/5 px-4 py-1 rounded-full border border-awo-mint/20 animate-pulse">COMING SOON</span>
+                    <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden">
+                        <img src="04-generated-sounds-list-I.A - cópia_2.png" onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=AI'" class="w-full h-full object-cover opacity-60">
                     </div>
-                    <h3 class="text-5xl font-black uppercase tracking-tighter text-white">Timeline Organizer</h3>
-                    <p class="text-awo-ash text-lg leading-relaxed font-light lowercase">
-                        The next generation of project management. Automatically organize 100+ tracks, categorize audio types, and prepare your project for professional mixing with a single click.
-                    </p>
-                    <div class="pt-4">
-                        <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="inline-flex items-center gap-3 border border-awo-mint/30 text-awo-mint px-8 py-4 rounded-xl font-black uppercase tracking-widest text-[10px] hover:bg-awo-mint hover:text-awo-black transition-all">
-                            Notify Me via WhatsApp
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-6">
-                    <div class="aspect-video bg-awo-deep/10 border border-white/5 rounded-3xl flex flex-col items-center justify-center text-center p-12 glass">
-                        <i data-lucide="lock" class="w-12 h-12 text-awo-mint/20 mb-6"></i>
-                        <h4 class="text-xl font-black text-white/40 mb-2 uppercase">Media under development</h4>
-                        <p class="text-awo-ash/40 text-xs lowercase italic">Internal builds only. Join our waitlist for beta access.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="testimonials" class="py-32 bg-awo-deep/10 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-24">
-                <h2 class="text-sm font-bold tracking-[0.4em] text-awo-mint uppercase mb-4">Social Proof</h2>
-                <h3 class="text-5xl font-black uppercase tracking-tighter text-white">What Editors say</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left lowercase font-light">
-                <div class="bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all">
-                    <i data-lucide="quote" class="absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"></i>
-                    <p class="text-awo-ash italic leading-relaxed mb-10 text-lg">"SFX Studio saves me hours of browsing and downloading. It's the tool I wish I had for the last 10 years."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale">
-                            <img src="https://i.pravatar.cc/150?u=a" alt="User">
-                        </div>
-                        <div>
-                            <h5 class="font-bold uppercase text-[10px] tracking-widest">Fabio Macedo</h5>
-                            <p class="text-awo-mint font-bold uppercase tracking-widest text-[8px]">Sr. Motion Designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all">
-                    <i data-lucide="quote" class="absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"></i>
-                    <p class="text-awo-ash italic leading-relaxed mb-10 text-lg">"Professional timeline prep has never been this easy. Organizer is a game changer for corporate workflows."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale">
-                            <img src="https://i.pravatar.cc/150?u=b" alt="User">
-                        </div>
-                        <div>
-                            <h5 class="font-bold uppercase text-[10px] tracking-widest">Mariana Leite</h5>
-                            <p class="text-awo-mint font-bold uppercase tracking-widest text-[8px]">Video Editor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-awo-black border border-white/5 p-12 rounded-[2.5rem] relative group hover:border-awo-mint/30 transition-all">
-                    <i data-lucide="quote" class="absolute top-10 right-12 w-10 h-10 text-awo-mint/10 group-hover:text-awo-mint/20 transition-all"></i>
-                    <p class="text-awo-ash italic leading-relaxed mb-10 text-lg">"The support is incredible and the tools are rock solid. Highly recommended for anyone needing speed."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 bg-awo-sage rounded-full overflow-hidden border-2 border-awo-mint/20 grayscale">
-                            <img src="https://i.pravatar.cc/150?u=c" alt="User">
-                        </div>
-                        <div>
-                            <h5 class="font-bold uppercase text-[10px] tracking-widest">Luan Almeida</h5>
-                            <p class="text-awo-mint font-bold uppercase tracking-widest text-[8px]">Freelance Editor</p>
-                        </div>
+                    <div class="aspect-square bg-awo-deep/40 rounded-2xl border border-white/5 overflow-hidden">
+                        <img src="05-settings-panel copiar333_2.png" onerror="this.src='https://placehold.co/400x400/1a2221/d1e9db?text=Setup'" class="w-full h-full object-cover opacity-60">
                     </div>
                 </div>
             </div>
@@ -280,44 +117,19 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="py-32 border-t border-white/5 bg-awo-black text-center relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-5xl font-black mb-8 uppercase tracking-tighter">Need custom workflow help?</h2>
-            <p class="text-awo-ash mb-16 italic text-lg font-light lowercase">We're here to optimize your Adobe ecosystem.</p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-8 mb-20 uppercase font-black tracking-widest text-[10px]">
-                <a href="https://wa.me/message/4WTESZSDVZDMB1" target="_blank" class="bg-awo-mint text-awo-black px-12 py-6 rounded-2xl hover:scale-105 transition-all flex items-center justify-center gap-3">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp Direct
-                </a>
-                <a href="mailto:antunes.daniell@gmail.com" class="border border-white/10 text-awo-ash px-12 py-6 rounded-2xl hover:bg-white/5 transition-all flex items-center justify-center gap-3">
-                    <i data-lucide="mail" class="w-8 h-8"></i> Email Support
-                </a>
-            </div>
-
-            <div class="pt-12 border-t border-white/5 text-awo-sage text-[10px] font-mono tracking-[0.4em] uppercase font-bold">
-                &copy; 2026 VISU.tools — High Performance Software for Creatives.
+    <footer class="py-20 border-t border-white/5 bg-awo-black text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <a href="https://aescripts.com/sfx-studio/" target="_blank" class="text-awo-mint hover:text-white transition-colors text-[10px] uppercase tracking-[0.3em] font-black">
+                Purchase on Aescripts
+            </a>
+            <div class="mt-12 text-awo-sage text-[10px] font-mono tracking-[0.4em] uppercase font-bold">
+                &copy; 2026 VISU.tools
             </div>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
-
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            if (menu) {
-                menu.classList.toggle('hidden');
-            }
-        }
-
-        function scrollToSection(id) {
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-                const menu = document.getElementById('mobile-menu');
-                if (menu) menu.classList.add('hidden');
-            }
-        }
     </script>
 </body>
 </html>
