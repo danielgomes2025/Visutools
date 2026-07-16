@@ -164,15 +164,17 @@
                 </div>
                 
                 <div class="lg:col-span-7 space-y-6">
-                    <!-- Clean YouTube Embed -->
+                    <!-- Native Video Embed -->
                     <div class="aspect-video bg-black rounded-3xl border border-white/10 overflow-hidden shadow-2xl relative group">
-                        <iframe 
-                            src="https://www.youtube.com/embed/z-I4H5B1PsE?rel=0&controls=0&modestbranding=1&showinfo=0" 
+                        <video 
                             class="w-full h-full object-cover" 
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowFullScreen>
-                        </iframe>
+                            controls 
+                            playsinline 
+                            preload="metadata"
+                            poster="01-search-interface.png">
+                            <source src="promo.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeos.
+                        </video>
                     </div>
                     
                     <!-- Screenshots Gallery -->
