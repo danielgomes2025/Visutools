@@ -51,6 +51,12 @@
         @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .animate-pulse-soft { animation: pulse-soft 2s infinite; }
 
+        @keyframes cta-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 20px rgba(209,233,219,0.1); }
+            50% { opacity: 0.85; transform: scale(0.98); box-shadow: 0 0 40px rgba(209,233,219,0.4); }
+        }
+        .animate-cta-pulse { animation: cta-pulse 3s infinite ease-in-out; }
+
         img { transition: opacity 0.3s ease; }
     </style>
 </head>
@@ -92,11 +98,27 @@
             <p class="mt-4 max-w-2xl mx-auto text-xl text-awo-ash mb-12 font-light italic leading-relaxed lowercase">
                 Native solutions for Adobe Premiere Pro. <br class="hidden md:block">
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="https://aescripts.com/sfx-studio/" target="_blank" class="bg-awo-offwhite text-awo-black px-10 py-4 rounded-xl hover:bg-white transition-all shadow-lg text-[10px] tracking-[0.2em] flex items-center justify-center gap-2">
+            <div class="flex flex-col sm:flex-row justify-center gap-6 relative z-20">
+                <a href="https://aescripts.com/sfx-studio/" target="_blank" class="animate-cta-pulse bg-awo-offwhite text-awo-black px-10 py-4 rounded-xl hover:bg-white transition-all text-[10px] tracking-[0.2em] flex items-center justify-center gap-2">
                     Try It For Free
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
+            </div>
+
+            <!-- Integration Icons -->
+            <div class="mt-12 flex flex-wrap justify-center items-center gap-8 text-awo-ash/50 text-[10px] uppercase tracking-widest font-bold relative z-20">
+                <div class="flex items-center gap-2 hover:text-awo-mint transition-colors">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M15.1 2H22v20L15.1 2zM8.9 2H2v20l6.9-20zM12 9.4L17.6 22h-3.8l-1.6-4.5H8.7L12 9.4z"/></svg>
+                    Adobe
+                </div>
+                <div class="flex items-center gap-2 hover:text-awo-mint transition-colors">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M2 2h20v20H2V2zm2 2v16h16V4H4zm3 4h4.5c2.2 0 3.5 1.2 3.5 3.5S12.7 15 10.5 15H9v3H7V8zm2 2v3h1.5c1 0 1.5-.8 1.5-1.5S11.5 10 10.5 10H9zm6 3c0-1.5 1-2 2.5-2v-2c-1.5 0-2.5.5-3 1.5V8h-2v9h2v-4z"/></svg>
+                    Premiere Pro
+                </div>
+                <div class="flex items-center gap-2 hover:text-awo-mint transition-colors">
+                    <i data-lucide="boxes" class="w-6 h-6"></i>
+                    aescripts
+                </div>
             </div>
         </div>
     </section>
@@ -121,9 +143,6 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                 <div class="lg:col-span-5 space-y-8">
                     <div>
-                        <div class="w-16 h-16 bg-blue-600/20 text-blue-400 rounded-2xl flex items-center justify-center shadow-lg mb-6 border border-blue-500/20">
-                            <i data-lucide="mic-2" class="w-8 h-8"></i>
-                        </div>
                         <h2 class="text-xs font-black tracking-[0.3em] text-awo-mint uppercase mb-2">CEP Panel v1.2.0</h2>
                         <h3 class="text-5xl font-black uppercase tracking-tighter text-white">SFX Studio</h3>
                     </div>
@@ -137,7 +156,7 @@
                     </ul>
                     
                     <div class="pt-4">
-                        <a href="https://aescripts.com/sfx-studio/" target="_blank" class="w-full bg-awo-mint text-awo-black px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white text-center transition-all flex flex-col items-center justify-center gap-1 shadow-[0_0_30px_rgba(209,233,219,0.2)]">
+                        <a href="https://aescripts.com/sfx-studio/" target="_blank" class="animate-cta-pulse w-full bg-awo-mint text-awo-black px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white text-center transition-all flex flex-col items-center justify-center gap-1">
                             <span>Download Free Trial</span>
                             <span class="text-[8px] tracking-normal font-medium opacity-70 lowercase">via aescripts.com</span>
                         </a>
