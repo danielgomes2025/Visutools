@@ -13,11 +13,32 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VISU | Professional Adobe Extensions</title>
-    
+    <title>SFX Studio for Premiere Pro | VISU.tools</title>
+
+    <!-- FIX: meta description + Open Graph. Sem isso o link vira retangulo cinza no YouTube/Instagram/WhatsApp -->
+    <meta name="description" content="SFX Studio: search 500,000+ sound effects from Freesound.org and generate AI audio with ElevenLabs, without leaving your Premiere Pro timeline. Free trial on aescripts.">
+    <link rel="canonical" href="https://visutools.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://visutools.com/">
+    <meta property="og:site_name" content="VISU.tools">
+    <meta property="og:title" content="SFX Studio for Premiere Pro | VISU.tools">
+    <meta property="og:description" content="Search 500,000+ sound effects and generate AI audio without leaving your timeline. Free trial.">
+    <!-- TROCAR se o arquivo tiver outro nome. Precisa ser 1200x630 e URL absoluta -->
+    <meta property="og:image" content="https://visutools.com/Thumb_002.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SFX Studio for Premiere Pro | VISU.tools">
+    <meta name="twitter:description" content="Search 500,000+ sound effects and generate AI audio without leaving your timeline. Free trial.">
+    <meta name="twitter:image" content="https://visutools.com/Thumb_002.png">
+
+    <meta name="theme-color" content="#1a2221">
+
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Load Lucide Icons - UMD Build for Browsers -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
@@ -38,7 +59,7 @@
             }
         }
     </script>
-    
+
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #1a2221; }
@@ -46,7 +67,7 @@
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
+
         .glass { background: rgba(56, 77, 77, 0.1); backdrop-filter: blur(10px); }
         @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .animate-pulse-soft { animation: pulse-soft 2s infinite; }
@@ -56,6 +77,12 @@
             50% { opacity: 0.85; transform: scale(0.98); box-shadow: 0 0 40px rgba(209,233,219,0.4); }
         }
         .animate-cta-pulse { animation: cta-pulse 3s infinite ease-in-out; }
+
+        /* FIX: respeita quem desativou animacao no sistema (acessibilidade) */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-cta-pulse, .animate-pulse-soft { animation: none; }
+            html { scroll-behavior: auto; }
+        }
 
         img { transition: opacity 0.3s ease; }
     </style>
@@ -71,7 +98,7 @@
                         VISU<span class="text-awo-mint lowercase">.tools</span>
                     </span>
                 </div>
-                
+
                 <!-- Trust Badge in Nav -->
                 <div class="hidden sm:flex items-center gap-2 text-awo-ash opacity-70">
                     <span class="lowercase font-light italic">Available exclusively on</span>
@@ -85,7 +112,7 @@
     <section id="hero" class="relative pt-40 pb-16 lg:pt-56 lg:pb-24 overflow-hidden text-center">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-awo-mint/5 blur-[150px] rounded-full pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            
+
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-awo-mint/20 bg-awo-mint/5 text-awo-mint mb-8">
                 <i data-lucide="shield-check" class="w-4 h-4"></i>
                 <span class="lowercase font-medium tracking-normal text-[11px]">Official aescripts Author</span>
@@ -99,7 +126,9 @@
                 Native solutions for Adobe Premiere Pro. <br class="hidden md:block">
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-6 relative z-20">
-                <a href="https://aescripts.com/sfx-studio/" target="_blank" class="animate-cta-pulse bg-awo-offwhite text-awo-black px-10 py-4 rounded-xl hover:bg-white transition-all text-[10px] tracking-[0.2em] flex items-center justify-center gap-2">
+                <!-- FIX: removido animate-cta-pulse daqui. Dois botoes pulsando ao mesmo tempo lia como infomercial.
+                     O CTA principal (secao do produto) mantem o pulse. -->
+                <a href="https://aescripts.com/sfx-studio/" target="_blank" rel="noopener" class="bg-awo-offwhite text-awo-black px-10 py-4 rounded-xl hover:bg-white transition-all text-[10px] tracking-[0.2em] flex items-center justify-center gap-2">
                     Try It For Free
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
@@ -108,11 +137,11 @@
             <!-- Integration Icons -->
             <div class="mt-12 flex flex-wrap justify-center items-center gap-8 text-awo-ash/50 text-[10px] uppercase tracking-widest font-bold relative z-20">
                 <div class="flex items-center gap-2 hover:text-awo-mint transition-colors">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M15.1 2H22v20L15.1 2zM8.9 2H2v20l6.9-20zM12 9.4L17.6 22h-3.8l-1.6-4.5H8.7L12 9.4z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6" aria-hidden="true"><path d="M15.1 2H22v20L15.1 2zM8.9 2H2v20l6.9-20zM12 9.4L17.6 22h-3.8l-1.6-4.5H8.7L12 9.4z"/></svg>
                     Adobe
                 </div>
                 <div class="flex items-center gap-2 hover:text-awo-mint transition-colors">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M2 2h20v20H2V2zm2 2v16h16V4H4zm3 4h4.5c2.2 0 3.5 1.2 3.5 3.5S12.7 15 10.5 15H9v3H7V8zm2 2v3h1.5c1 0 1.5-.8 1.5-1.5S11.5 10 10.5 10H9zm6 3c0-1.5 1-2 2.5-2v-2c-1.5 0-2.5.5-3 1.5V8h-2v9h2v-4z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6" aria-hidden="true"><path d="M2 2h20v20H2V2zm2 2v16h16V4H4zm3 4h4.5c2.2 0 3.5 1.2 3.5 3.5S12.7 15 10.5 15H9v3H7V8zm2 2v3h1.5c1 0 1.5-.8 1.5-1.5S11.5 10 10.5 10H9zm6 3c0-1.5 1-2 2.5-2v-2c-1.5 0-2.5.5-3 1.5V8h-2v9h2v-4z"/></svg>
                     Premiere Pro
                 </div>
                 <div class="flex items-center gap-2 hover:text-awo-mint transition-colors">
@@ -126,11 +155,12 @@
     <!-- Trust Factors Bar -->
     <div class="border-y border-white/5 bg-awo-deep/10 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-awo-ash text-[9px] sm:text-[10px] opacity-80">
+            <!-- FIX: 9px era ilegivel. Subido para 10/11px -->
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-awo-ash text-[10px] sm:text-[11px] opacity-80">
                 <div class="flex items-center gap-2"><i data-lucide="download-cloud" class="w-4 h-4 text-awo-mint"></i> Free Trial Available</div>
                 <div class="flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4 text-awo-mint"></i> Instant Setup</div>
                 <div class="flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4 text-awo-mint"></i> Lifetime Updates</div>
-                <div class="flex items-center gap-2"><i data-lucide="monitor" class="w-4 h-4 text-awo-mint"></i> Mac & Windows</div>
+                <div class="flex items-center gap-2"><i data-lucide="monitor" class="w-4 h-4 text-awo-mint"></i> Mac &amp; Windows</div>
             </div>
         </div>
     </div>
@@ -138,12 +168,13 @@
     <!-- DETAILED PRODUCTS SECTION -->
     <section id="products" class="py-24 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-48">
-            
+
             <!-- MAIN PRODUCT: SFX STUDIO -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                 <div class="lg:col-span-5 space-y-8">
                     <div>
-                        <h2 class="text-xs font-black tracking-[0.3em] text-awo-mint uppercase mb-2">CEP Panel v1.2.0</h2>
+                        <!-- FIX: v1.2.0 -> v2.0.0 -->
+                        <h2 class="text-xs font-black tracking-[0.3em] text-awo-mint uppercase mb-2">CEP Panel v2.0.0</h2>
                         <h3 class="text-5xl font-black uppercase tracking-tighter text-white">SFX Studio</h3>
                     </div>
                     <p class="text-awo-ash text-lg leading-relaxed font-light lowercase">
@@ -152,44 +183,49 @@
                     <ul class="space-y-4 text-[10px] font-bold text-awo-sage bg-awo-deep/10 p-6 rounded-2xl border border-white/5">
                         <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Direct Import to Timeline</li>
                         <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> AI Generation via ElevenLabs</li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Metadata & Search Integration</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-awo-mint"></i> Metadata &amp; Search Integration</li>
                     </ul>
-                    
+
                     <div class="pt-4">
-                        <a href="https://aescripts.com/sfx-studio/" target="_blank" class="animate-cta-pulse w-full bg-awo-mint text-awo-black px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white text-center transition-all flex flex-col items-center justify-center gap-1">
+                        <a href="https://aescripts.com/sfx-studio/" target="_blank" rel="noopener" class="animate-cta-pulse w-full bg-awo-mint text-awo-black px-8 py-5 rounded-2xl font-black uppercase tracking-[0.2em] hover:bg-white text-center transition-all flex flex-col items-center justify-center gap-1">
                             <span>Download Free Trial</span>
                             <span class="text-[8px] tracking-normal font-medium opacity-70 lowercase">via aescripts.com</span>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="lg:col-span-7 space-y-6">
                     <!-- Native Video Embed -->
                     <div class="aspect-video bg-black rounded-3xl border border-white/10 overflow-hidden shadow-2xl relative group">
-                        <video 
-                            class="w-full h-full object-cover" 
-                            controls 
-                            playsinline 
+                        <video
+                            class="w-full h-full object-cover"
+                            controls
+                            playsinline
                             preload="metadata"
                             poster="Thumb_002.png">
                             <source src="promo.mp4" type="video/mp4">
-                            Seu navegador não suporta a reprodução de vídeos.
+                            <!-- FIX: fallback estava em portugues numa pagina em ingles -->
+                            Your browser does not support video playback.
                         </video>
                     </div>
-                    
+
                     <!-- Screenshots Gallery -->
+                    <!-- FIX 1: removido opacity-60/group-hover:opacity-100. Nao existe hover no mobile,
+                                entao TODO visitante de celular via as screenshots a 60% para sempre.
+                         FIX 2: object-cover -> object-contain. O painel CEP e vertical; o cover estava
+                                cortando a screenshot dentro do container 4:3. -->
                     <div class="grid grid-cols-2 gap-6 max-w-4xl mx-auto">
                         <div class="aspect-[4/3] bg-awo-deep/20 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group cursor-pointer" onclick="openLightbox('01-search-interface.png')">
-                            <img src="01-search-interface.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Search Interface" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a2221/d1e9db?text=Image+1';">
+                            <img src="01-search-interface.png" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="SFX Studio search interface inside Premiere Pro" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a2221/d1e9db?text=Image+1';">
                         </div>
                         <div class="aspect-[4/3] bg-awo-deep/20 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group cursor-pointer" onclick="openLightbox('02-ai-generation-setup.png')">
-                            <img src="02-ai-generation-setup.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="AI Generation" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a2221/d1e9db?text=Image+2';">
+                            <img src="02-ai-generation-setup.png" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="AI sound effect generation setup with ElevenLabs" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a2221/d1e9db?text=Image+2';">
                         </div>
                         <div class="aspect-[4/3] bg-awo-deep/20 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group cursor-pointer" onclick="openLightbox('04-generated-sounds-list-I.A.png')">
-                            <img src="04-generated-sounds-list-I.A.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Sounds List" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a2221/d1e9db?text=Image+3';">
+                            <img src="04-generated-sounds-list-I.A.png" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="List of AI generated sound effects" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a2221/d1e9db?text=Image+3';">
                         </div>
                         <div class="aspect-[4/3] bg-awo-deep/20 rounded-2xl border border-white/5 overflow-hidden hover:border-awo-mint/50 transition-all group cursor-pointer" onclick="openLightbox('05-settings-panel.png')">
-                            <img src="05-settings-panel.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Settings Panel" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a2221/d1e9db?text=Image+4';">
+                            <img src="05-settings-panel.png" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" alt="SFX Studio settings panel with API key configuration" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a2221/d1e9db?text=Image+4';">
                         </div>
                     </div>
                 </div>
@@ -204,14 +240,16 @@
                 <h2 class="text-sm font-bold tracking-[0.4em] text-awo-mint uppercase mb-4">Quick Answers</h2>
                 <h3 class="text-4xl font-black uppercase tracking-tighter text-white">Frequently Asked</h3>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left lowercase font-light">
+
+            <!-- FIX: esta grid nao definia tamanho de fonte, entao herdava text-[10px] do <body>.
+                      As respostas do FAQ estavam sendo renderizadas em 10 pixels. -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left lowercase font-light text-[14px] tracking-normal">
                 <div class="p-8 border border-white/5 rounded-3xl bg-awo-deep/5">
                     <h4 class="text-white font-bold uppercase tracking-widest text-[10px] mb-3 flex items-center gap-2"><i data-lucide="monitor" class="w-4 h-4 text-awo-mint"></i> Compatibility</h4>
                     <p class="text-awo-ash leading-relaxed">Fully compatible with Adobe Premiere Pro CC 2022 and newer on both MacOS and Windows.</p>
                 </div>
                 <div class="p-8 border border-white/5 rounded-3xl bg-awo-deep/5">
-                    <h4 class="text-white font-bold uppercase tracking-widest text-[10px] mb-3 flex items-center gap-2"><i data-lucide="download" class="w-4 h-4 text-awo-mint"></i> Trial & Licensing</h4>
+                    <h4 class="text-white font-bold uppercase tracking-widest text-[10px] mb-3 flex items-center gap-2"><i data-lucide="download" class="w-4 h-4 text-awo-mint"></i> Trial &amp; Licensing</h4>
                     <p class="text-awo-ash leading-relaxed">You can download a fully functional free trial via aescripts. If you love it, you can easily upgrade to a lifetime license later.</p>
                 </div>
                 <div class="p-8 border border-white/5 rounded-3xl bg-awo-deep/5">
@@ -229,7 +267,7 @@
     <!-- Footer -->
     <footer class="py-16 border-t border-white/5 bg-[#141a1a] text-center relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
-            
+
             <div class="text-left">
                 <span class="text-2xl font-black tracking-tighter flex items-center gap-1 uppercase text-white/50">
                     VISU<span class="text-awo-mint/50 lowercase">.tools</span>
@@ -238,12 +276,12 @@
             </div>
 
             <div class="flex gap-8 text-awo-ash/70 hover:text-awo-ash transition-colors">
-                <a href="https://aescripts.com/sfx-studio/" target="_blank" class="hover:text-awo-mint transition-colors">Product Page</a>
-                <a href="https://aescripts.com/contact/?product_id=5333" target="_blank" class="hover:text-awo-mint transition-colors">Support Ticket</a>
+                <a href="https://aescripts.com/sfx-studio/" target="_blank" rel="noopener" class="hover:text-awo-mint transition-colors">Product Page</a>
+                <a href="https://aescripts.com/contact/?product_id=5333" target="_blank" rel="noopener" class="hover:text-awo-mint transition-colors">Support Ticket</a>
             </div>
-            
+
             <div class="text-awo-sage/50 text-[9px] font-mono tracking-[0.2em] uppercase font-bold text-right">
-                Downloads & Licensing managed by<br>
+                Downloads &amp; Licensing managed by<br>
                 <span class="text-white/60 tracking-normal text-xs">aescripts + aeplugins</span>
                 <br><br>
                 &copy; 2026 VISU.tools
@@ -254,11 +292,12 @@
     <!-- Lightbox Modal -->
     <div id="lightbox" class="fixed inset-0 z-[200] hidden items-center justify-center opacity-0 transition-opacity duration-300">
         <div class="absolute inset-0 bg-awo-black/95 backdrop-blur-xl" onclick="closeLightbox()"></div>
-        <button onclick="closeLightbox()" class="absolute top-8 right-8 text-awo-ash hover:text-white transition-colors z-[210] bg-white/5 hover:bg-white/10 p-3 rounded-full">
+        <button onclick="closeLightbox()" aria-label="Close" class="absolute top-8 right-8 text-awo-ash hover:text-white transition-colors z-[210] bg-white/5 hover:bg-white/10 p-3 rounded-full">
             <i data-lucide="x" class="w-8 h-8"></i>
         </button>
         <div class="relative z-[210] max-w-[90vw] max-h-[90vh] p-4 flex justify-center items-center pointer-events-none">
-            <img id="lightbox-img" src="" alt="Ampliado" class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl transition-transform duration-300 scale-95 pointer-events-auto">
+            <!-- FIX: alt estava em portugues ("Ampliado") -->
+            <img id="lightbox-img" src="" alt="Enlarged screenshot" class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl transition-transform duration-300 scale-95 pointer-events-auto">
         </div>
     </div>
 
@@ -272,15 +311,15 @@
             lightboxImg.src = imageSrc;
             lightbox.classList.remove('hidden');
             lightbox.classList.add('flex');
-            
+
             setTimeout(() => {
                 lightbox.classList.remove('opacity-0');
                 lightbox.classList.add('opacity-100');
                 lightboxImg.classList.remove('scale-95');
                 lightboxImg.classList.add('scale-100');
             }, 10);
-            
-            document.body.style.overflow = 'hidden'; 
+
+            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
@@ -288,14 +327,14 @@
             lightbox.classList.add('opacity-0');
             lightboxImg.classList.remove('scale-100');
             lightboxImg.classList.add('scale-95');
-            
+
             setTimeout(() => {
                 lightbox.classList.add('hidden');
                 lightbox.classList.remove('flex');
                 lightboxImg.src = "";
-            }, 300); 
-            
-            document.body.style.overflow = ''; 
+            }, 300);
+
+            document.body.style.overflow = '';
         }
 
         document.addEventListener('keydown', function(event) {
